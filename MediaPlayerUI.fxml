@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="mainContainer" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.mediaplayer.MediaPlayerController" stylesheets="@styles.css">
+    
+    <!-- Title Bar -->
+    <HBox styleClass="title-bar">
+        <Label text="My Media Player" styleClass="app-title"/>
+        <Region HBox.hgrow="ALWAYS"/>
+    </HBox>
+    
+    <!-- Main Content -->
+    <HBox styleClass="main-content">
+        
+        <!-- Left Panel - Now Playing -->
+        <VBox styleClass="left-panel" spacing="20">
+            <Label text="Now Playing" styleClass="section-title"/>
+            
+            <!-- Now Playing Card -->
+            <VBox styleClass="now-playing-card">
+                <Label fx:id="nowPlayingLabel" text="Chasing Dreams" styleClass="song-title"/>
+                <Label fx:id="artistLabel" text="Aurora Sky" styleClass="artist-name"/>
+                
+                <!-- Progress Bar and Time -->
+                <VBox spacing="10">
+                    <ProgressBar fx:id="progressBar" progress="0.0" styleClass="progress-bar"/>
+                    <HBox>
+                        <Label fx:id="currentTimeLabel" text="01:45" styleClass="time-label"/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Label fx:id="totalTimeLabel" text="/04:12" styleClass="time-label"/>
+                    </HBox>
+                </VBox>
+                
+                <!-- Control Buttons -->
+                <HBox spacing="30" alignment="CENTER">
+                    <Button fx:id="prevButton" text="← Previous" styleClass="control-button"/>
+                    <Button fx:id="historyButton" text="History" styleClass="control-button"/>
+                    <Button fx:id="nextButton" text="Next" styleClass="control-button"/>
+                </HBox>
+                
+                <!-- Volume Control -->
+                <VBox spacing="5">
+                    <Label text="Volume" styleClass="volume-label"/>
+                    <Slider fx:id="volumeSlider" min="0" max="1" value="0.7" styleClass="volume-slider"/>
+                </VBox>
+            </VBox>
+        </VBox>
+        
+        <!-- Right Panel - Playback History and Playlist -->
+        <VBox styleClass="right-panel" spacing="20">
+            
+            <!-- Playback History Section -->
+            <VBox spacing="10">
+                <Label text="Playback History" styleClass="section-title"/>
+                <Label text="Navigate through your listening history" styleClass="section-subtitle"/>
+                
+                <ListView fx:id="historyListView" styleClass="history-list">
+                    <!-- Items will be added dynamically -->
+                </ListView>
+            </VBox>
+            
+            <!-- Upcoming Playlist Section -->
+            <VBox spacing="10">
+                <Label text="Upcoming Playlist" styleClass="section-title"/>
+                
+                <ListView fx:id="playlistListView" styleClass="playlist-list">
+                    <!-- Items will be added dynamically -->
+                </ListView>
+            </VBox>
+        </VBox>
+    </HBox>
+    
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10"/>
+    </padding>
+    
+    <spacing>20</spacing>
+</VBox>
