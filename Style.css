@@ -1,0 +1,181 @@
+/* Main Colors */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #0a192f, #112240);
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Title Bar */
+.title-bar {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 10;
+    -fx-padding: 15 20;
+}
+
+.app-title {
+    -fx-text-fill: #64ffda;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+/* Main Content Layout */
+.main-content {
+    -fx-spacing: 30;
+}
+
+.left-panel {
+    -fx-min-width: 400;
+    -fx-pref-width: 400;
+}
+
+.right-panel {
+    -fx-min-width: 450;
+    -fx-pref-width: 450;
+}
+
+/* Section Titles */
+.section-title {
+    -fx-text-fill: #ccd6f6;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.section-subtitle {
+    -fx-text-fill: #8892b0;
+    -fx-font-size: 14px;
+}
+
+/* Now Playing Card */
+.now-playing-card {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 15;
+    -fx-border-color: rgba(100, 255, 218, 0.2);
+    -fx-border-radius: 15;
+    -fx-border-width: 1;
+    -fx-padding: 30;
+    -fx-spacing: 25;
+}
+
+.song-title {
+    -fx-text-fill: #64ffda;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+
+.artist-name {
+    -fx-text-fill: #8892b0;
+    -fx-font-size: 18px;
+}
+
+/* Progress Bar */
+.progress-bar {
+    -fx-accent: #64ffda;
+    -fx-pref-height: 8px;
+    -fx-background-radius: 4;
+}
+
+.progress-bar .track {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 4;
+}
+
+.progress-bar .bar {
+    -fx-background-radius: 4;
+}
+
+.time-label {
+    -fx-text-fill: #8892b0;
+    -fx-font-size: 14px;
+}
+
+/* Control Buttons */
+.control-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ccd6f6;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-border-color: #64ffda;
+    -fx-border-radius: 20;
+    -fx-border-width: 1;
+    -fx-padding: 10 20;
+    -fx-min-width: 120;
+}
+
+.control-button:hover {
+    -fx-background-color: rgba(100, 255, 218, 0.1);
+    -fx-text-fill: #64ffda;
+    -fx-cursor: hand;
+}
+
+.control-button:pressed {
+    -fx-background-color: rgba(100, 255, 218, 0.2);
+}
+
+/* Volume Control */
+.volume-label {
+    -fx-text-fill: #8892b0;
+    -fx-font-size: 14px;
+}
+
+.volume-slider {
+    -fx-pref-height: 25px;
+}
+
+.volume-slider .track {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 5;
+}
+
+.volume-slider .thumb {
+    -fx-background-color: #64ffda;
+    -fx-background-radius: 7;
+    -fx-pref-height: 14px;
+    -fx-pref-width: 14px;
+}
+
+/* List Views */
+.history-list, .playlist-list {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+    -fx-padding: 5;
+}
+
+.history-list .list-cell, .playlist-list .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ccd6f6;
+    -fx-font-size: 14px;
+    -fx-padding: 15 20;
+    -fx-border-color: transparent transparent rgba(255, 255, 255, 0.05) transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.history-list .list-cell:hover, .playlist-list .list-cell:hover {
+    -fx-background-color: rgba(100, 255, 218, 0.1);
+    -fx-text-fill: #64ffda;
+    -fx-cursor: hand;
+}
+
+.history-list .list-cell:selected, .playlist-list .list-cell:selected {
+    -fx-background-color: rgba(100, 255, 218, 0.2);
+    -fx-text-fill: #64ffda;
+}
+
+/* Scroll Bars */
+.scroll-bar:vertical .track,
+.scroll-bar:horizontal .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: rgba(100, 255, 218, 0.3);
+    -fx-background-radius: 5;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+                               }
